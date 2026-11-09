@@ -1,0 +1,722 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Consend', sans-serif;
+}
+
+i{
+        text-align: center;
+        padding-top: 10px;
+    }
+hr{
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+  border: none;
+  height: 2px;
+  background-color: #ff0000;
+  opacity: 1;
+}
+  span i {
+    border-radius: 30px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+span i:hover{
+    background: #000000;
+    transition: all 0.3s ease-in-out;
+}
+::-webkit-scrollbar{
+	width:10px;
+}
+::-webkit-scrollbar-thumb{
+	width:10px;
+	background: #f5f5f5;
+	border-radius:30px;
+    transition: all 0.2s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+::selection {
+    background: rgba(18, 18, 18, 0.7);
+    color: #f1f1f1;
+}
+html,body {
+    background-color: #121212;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    overflow-x: hidden;
+    transition: all .3s ease-in-out;
+    font-family: "Raleway", sans-serif;
+}
+
+.interface {
+    max-width: 1280px;
+    max-height: 900vh;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+header .btn-contato button, .hero-site button, .sobre-nos button{
+    width: 220px;
+    height: 60px;
+    font-size: 1rem;
+    background: transparent;
+    border: solid 1px #fff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: "Ralewey", sans-serif;
+    font-weight: 300;
+}
+
+header .btn-contato button:hover,.sobre-nos button:hover{
+    transition: all .5s ease-in-out;
+    background: #f1f1f1;
+    color: #000;
+}
+
+header {
+    width: 100%;
+    padding: 40px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .5s ease-in-out;
+    background: #6b553d29;
+    z-index: 5;
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 100px;
+    margin-top: -10px;
+}
+
+header .logo img.logo-preta {
+    width: 60px;
+    display: none;
+}
+
+header.rolar {
+    background: #ffffffe6;
+    padding: 1.2rem 0px;
+    filter: drop-shadow(0px 0px 8px #00000061);
+}
+header.rolar i:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+header.rolar .menu-desktop nav ul li a {
+    font-size: 13px;
+    color: #000;
+}
+
+header.rolar .btn-contato button{
+    font-size: 13px;
+    border: solid 1px #000;
+    color: #000;
+    border-radius: 30px;
+}
+
+header.rolar .btn-contato button:hover {
+    transition: all .5s ease-in-out;
+    background: #000;
+    color: #fff;
+}
+
+header.rolar .logo .logo-branca {
+    display: none;
+}
+
+header.rolar .logo .logo-preta {
+    display: block;
+}
+/* fim menu dinanmico */
+
+header .menu-desktop nav ul {
+    list-style: none;
+}
+
+header .menu-desktop nav ul li {
+    display: inline-block;
+    margin: 0px 20px;
+ }
+
+header .menu-desktop nav ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 17px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    transition: all 1s ease-in-out;   
+}
+
+header .menu-desktop nav a:hover {
+    transition: all 1s ease-in-out;
+    transform: scale(1.05);
+}
+
+header .btn-contato button{
+    width: 140px;
+    height: 50px;
+}
+/* botão menu mobile */
+header .btn-menu-mob{
+    display: none;
+    position: relative;
+    z-index: 9999;
+}
+
+header .btn-menu-mob div{
+    background-color: #fff;
+    height: 3px;
+    margin: 10px 0;
+    transition: all .2s ease-in-out;
+}
+
+header .btn-menu-mob .line-menu-mob-1{
+    width: 30px;
+    cursor: pointer;
+}
+header .btn-menu-mob .line-menu-mob-2{
+    width: 20px;
+    cursor: pointer;
+}
+
+header.rolar .btn-menu-mob div{
+    background: #000;
+}
+
+header .btn-menu-mob .line-menu-mob-1.ativo1{
+    transform: rotate(45deg) translate(31%);
+    background: #fff;
+}
+
+header .btn-menu-mob .line-menu-mob-2.ativo2{
+    transform: rotate(-45deg) translate(31%);
+    width: 30px;
+    background-color: #fff;
+}
+/* fim botão menu mobile */
+
+/* menu mobile */
+header .menu-mobile{
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    background-color: #000000cc;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .5s ease-in-out;
+}
+
+header .menu-mobile nav ul {
+    list-style: none;
+}
+
+header .menu-mobile nav {
+    width: 100%;
+}
+
+header .menu-mobile nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1.2rem 0px;
+}
+
+header .menu-mobile nav a:hover {
+    background-color: #fff;
+    color: #000;
+    transition: all .5s ease-in-out;
+    filter: drop-shadow(0px 0px 20px #fff);
+}
+
+header .menu-mobile.abrir{
+    width: 90%;
+    height: 80vh;
+    border-radius: 10px;
+}
+
+.hero{
+    width: 100%;
+    height: 98vh;
+    background-image: linear-gradient(135deg,#00000080,#00000080),url(../img/banner/banner-home-pc.png);
+    background-size: 100%, 100%;
+    background-position: left, center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1{
+    width: 60%;
+    padding-left: 123px;
+    padding-top: 248px;
+    font-family: "Playdisfir Display", serif;
+    font-size: 60px;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #ffffffe6;
+}
+.hero-subtitle {
+    background-color: #9b754d65;
+    font-family: "Playdisfir Display", serif;
+    text-shadow: 2px 2px 2px #00000080;
+    padding: 8px;
+}
+.hero p{
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    padding-left: 107px;
+    color: #fff;
+    font-weight: 300;
+    width: 50%;
+}
+
+.hero a{
+    width: 200px;
+    padding: 8px;
+    margin-left: 107px;
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.hero a:hover{
+    background: #f1f1f1;
+    color: #000000d4;
+    border-radius: 12px 28px;
+    padding: 8px;
+    transition: background-color 0.2s ease-in-out;
+}
+.hero i:hover{
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sobre-nos{
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image:linear-gradient(#000000b3, #000000b3),url(../img/banner/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    background-position: 100%;
+    background-attachment: fixed;
+}
+
+.sobre-nos h2{
+    text-align: center;
+    color: #fff;
+    font-family: "Play Disfir", serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.sobre-nos p{
+    width: 80%;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.6px;
+    text-align: left;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 21px;
+    letter-spacing: 0.6;
+}
+.btn-principal{
+    width: 200px;
+    padding: 8px;
+    margin-left: 500px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+}
+.escolha{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #f1f1f1;
+}
+.escolha h2{
+    text-align: center;
+    color: #000;
+    font-family: "Play Disfir", serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.escolha p{
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+.diferenciais{
+ width: 100%;
+ padding-top: 50px;
+ padding-bottom: 50px;
+ background: #f1f1f1;
+ border: none;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-body{
+    width: 100%;
+    height: auto;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card-title{
+    font-family: "Play Disfir", serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card-text,p{
+    font-family: "Raleway" sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.btn-dark{
+    border: none;
+    background: #333;
+    border-radius: 40px;
+    padding: 10px 20px;
+    text-align: center;
+}
+.btn i{
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    color: #fff;
+    margin: 0 auto;
+}
+.trabalhamos{
+    width: 100%;
+    background: #f1f1f1;
+}
+
+.trabalhamos h2{
+ text-align: center;
+    color: #000;
+    font-family: "Play Disfir", serif;
+    font-size: 2rem;
+    font-weight: 600;   
+}
+
+.frase{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #f1f1f1;
+}
+
+.frase h3{
+    text-align: center;
+    color: #000;
+    font-family: "Play Disfir", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 20px;   
+}
+
+.frase a{
+    width: 200px;
+    background: #000;
+    padding: 8px;
+    border-radius: 40px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 600px;
+    transition: all 0.2s ease-in-out;
+}
+
+.frase a:hover{
+    transition: all 0.2s ease-in-out;
+    border-radius: 12px 28px;
+}
+
+/* call to action */
+.call-area {
+  background-color: #000;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-area .container {
+  padding: 50px 100px;
+}
+.call-area .row {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.call-area p {
+  color: #fff;
+  font-weight: 300;
+  font-size: 20px;
+  margin-left: auto;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+  display: block;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-family: "Paly Disfir", serif;
+}
+
+.call-area a{
+  width: 200px;
+  background: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  padding: 8px;
+  color: #000;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: -120px;
+}
+
+.call-area:hover a{
+  transition: all 0.2s;
+  background-color: #f1f1f1;
+  border-radius: 12px 28px;
+}
+
+.showroom{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #f1f1f1;
+    gap: 20px;
+}
+.showroom h2{
+    text-align: center;
+    font-family: "Play Disfir", serif;
+    font-size: 2rem;
+}
+
+.showroom p{
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+}
+.showroom .card{
+    padding-top: 40px;
+    border: none;
+    box-shadow: rgba(37, 37, 37, 0.4) 5px 5px, rgba(97, 97, 97, 0.3) 10px 10px, rgba(104, 104, 104, 0.2) 15px 15px, rgba(153, 153, 153, 0.1) 20px 20px, rgba(19, 19, 19, 0.05) 25px 25px;
+}
+
+.card a{
+    width: 150px;
+    padding: 8px;
+    background: black;
+    color: #ffffffe5;
+    border-radius: 30px;
+    transition: all 0.2 ease-in-out;
+    margin-left: 68px;
+}
+.card a:hover{
+    background: #000000d0;
+    color: #fff;
+    border-radius: 12px 28px;
+    transition: all 0.2 ease-in-out;
+}
+.card img{
+    width: 300px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 2px;
+    opacity: 0.9;
+    box-shadow: 2px 2px 2px #fff;
+}
+.back-quarto-princesa{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#0000004d, #0000004d), 
+    url(../img/quarto-princesa/quarto-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%, 100%;    
+}
+.back-suite-master{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#0000004d, #0000004d), 
+    url(../img/suite-master/suite-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%, 100%;
+}
+.back-cozinha{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#0000004d, #0000004d), 
+    url(../img/cozinha/cozinha-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%, 100%;
+}
+.back-tv{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#0000004d, #0000004d), 
+    url(../img/sala-estar/sala-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%, 100%;
+}
+.maps-forms{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #f1f1f1;
+}
+
+.maps-forms, h2{
+    font-family: "Paly Disfir", serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.forms{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 32rem;
+    font-size: 1.125rem;
+    padding-bottom: 2rem;
+}
+.form h2{
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+.form h2 span{
+    background: #ff8800;
+    color: #fff;
+    font-weight: 300;
+}
+.form label, .form.input, .form textarea, .form button{
+    display: block;
+    width: 100%;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.form label{
+    color: #000;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.form input, .form textarea{
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    width: 100%;
+}
+
+.form textarea{
+    width: 100%;
+    min-height: 15rem;
+    resize: none;
+}
+
+.form button{
+    background: #fff;
+    padding: 1rem;
+    color: #0d0e0f;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.form button:hover{
+    transition: all .3s ease-in-out;
+    background-color: #d1d1d1;
+}
+footer{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer h5{
+    font-family: "Play Disfir", serif;
+    font-size: 1rem;
+}
+
+footer p{
+    font-family: "Raleway";
+    font-size: 1rem;
+    line-height: 21px;
+    letter-spacing: 0.6;
+}
+.copy-text{
+    text-align: center;
+    margin: 0;
+}
+.logo-footer{
+    padding-top: 60px;
+}
+.copy-logo,img{
+    width: 100%;
+}
